@@ -1,0 +1,15 @@
+.swiper-button-next::after {
+  content: none
+}
+
+.swiper-button-prev::after {
+    content: none
+}
+
+.swiper-pagination-bullet {
+  background-color: #f58220 !important;
+}
+/* .mySwiper, .mySwiper .swiper-slide {
+  height: 60vh; 
+} */
+

@@ -1,9 +1,13 @@
+import Banner from "../../Components/Banner/Banner";
+import Container from "../../Components/Shear/Container/Container";
 
 
 const Home = () => {
     return (
         <div>
-            <p>This is home page</p>
+            <Container>
+                <Banner/>
+            </Container>
         </div>
     );
 };
