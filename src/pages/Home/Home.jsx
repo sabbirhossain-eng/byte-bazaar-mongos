@@ -1,4 +1,5 @@
 import Banner from "../../Components/Banner/Banner";
+import Maerquees from "../../Components/Marquees/Maerquees";
 import Container from "../../Components/Shear/Container/Container";
 
 
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Container>
                 <Banner/>
+                <Maerquees/>
             </Container>
         </div>
     );
