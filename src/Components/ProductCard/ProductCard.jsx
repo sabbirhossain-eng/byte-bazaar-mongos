@@ -11,7 +11,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-
+import img from "../../assets/img1.png";
 
 const ProductCard = () => {
   
@@ -24,16 +24,17 @@ const ProductCard = () => {
       Save: 100$
       </Typography>
       <CardMedia
+      className="mt-12"
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image={img}
         alt="Paella dish"
       />
+      <hr className="mt-4 py-[1px] bg-slate-200" />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+        
+        <Typography className="hover:text-secondary">
+        MSI Modern 15 B7M Ryzen 5 7530U 16GB RAM 15.6 inc FHD Laptop
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
