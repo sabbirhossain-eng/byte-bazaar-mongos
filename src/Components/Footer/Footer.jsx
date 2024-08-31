@@ -5,7 +5,7 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="mt-10">
       <div className="bg-black py-4 text-gray-500">
         <Container>
           <div className="container px-4 mx-auto">
