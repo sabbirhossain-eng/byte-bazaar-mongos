@@ -85,38 +85,58 @@ const Footer = () => {
               <div className="px-4 my-4 w-full sm:w-auto">
                 <div>
                   <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
-                    Blog
+                    
                   </h2>
                 </div>
                 <ul className="leading-8">
                   <li>
                     <a href="#" className="hover:text-secondary">
-                      Getting Started With HTML and CSS
+                    About Us
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-secondary">
-                      What Is Flex And When to Use It?
+                    Terms and Conditions
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-secondary">
-                      How TailwindCSS Can Help Your Productivity?
+                    Career
                     </a>
                   </li>
                   <li>
                     <a href="#" className="hover:text-secondary">
-                      5 Tips to Make Responsive Website
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-secondary">
-                      See More
+                    Brands
                     </a>
                   </li>
                 </ul>
               </div>
-              {/* Section 4 */}
+              {/* section 4 */}
+              <div className="px-4 my-4 w-full sm:w-auto">
+                <div>
+                  <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
+                    
+                  </h2>
+                </div>
+                <ul className="leading-8">
+                  <li>
+                    <a href="#" className="hover:text-secondary">
+                    Online Delivery
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-secondary">
+                    Refund and Return Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-secondary">
+                    Blog
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              {/* Section 5 */}
               <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
                 <div>
                   <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
