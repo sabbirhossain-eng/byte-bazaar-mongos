@@ -150,39 +150,39 @@ const Footer = () => {
           </div>
           {/* social link */}
           <hr />
-          <div className="bg-black py-4 text-gray-100">
+          <div className=" py-4 text-gray-100">
         <div className="container mx-auto px-4">
           <div className="-mx-4 flex flex-wrap justify-around items-center">
             <p className="text-sm text-gray-500">
             Experience Byte Bazaar :
             </p>
             <p className="bg-gray-600 rounded-full p-2">
-            <FaYoutube className=" text-white text-2xl hover:text-secondary"/>
+            <FaYoutube className=" text-white text-xl hover:text-secondary"/>
             </p>
             <p className="bg-gray-600 rounded-full p-2">
-            <FaFacebook className=" text-white text-2xl hover:text-secondary"/>
+            <FaFacebook className=" text-white text-xl hover:text-secondary"/>
             </p>
             <p className="bg-gray-600 rounded-full p-2">
-            <FaInstagram className=" text-white text-2xl hover:text-secondary"/>
+            <FaInstagram className=" text-white text-xl hover:text-secondary"/>
             </p>
+          </div>
+        </div>
+      </div>
+      {/* Footer bottom */}
+      <hr />
+      <div className=" py-4 text-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="-mx-4 flex flex-wrap justify-between">
+            <div className="px-4 text-sm text-gray-500 w-full text-center sm:w-auto sm:text-left">
+            © 2024 Byte Bazzer | All rights reserved
+            </div>
+            <div className="px-4 w-full text-sm text-gray-500 text-center sm:w-auto sm:text-left">
+            Powered By: Byte Bazzer
+            </div>
           </div>
         </div>
       </div>
         </Container>
-      </div>
-      <div className="bg-indigo-700 py-4 text-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="-mx-4 flex flex-wrap justify-between">
-            <div className="px-4 w-full text-center sm:w-auto sm:text-left">
-              Copyright © 2020
-              {/* <script>new Date().getFullYear() > 2020 && document.write("- " + new Date().getFullYear())</script>- 2022 */}
-              Tailwindow. All Rights Reserved.
-            </div>
-            <div className="px-4 w-full text-center sm:w-auto sm:text-left">
-              Made with ❤️ by Tailwindow.
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );
