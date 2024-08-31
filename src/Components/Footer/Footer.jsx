@@ -9,9 +9,10 @@ const Footer = () => {
         <Container>
           <div className="container px-4 mx-auto">
             <div className="-mx-4 flex flex-wrap justify-between">
+              {/* section 1 */}
               <div className="px-4 my-4 w-full xl:w-1/5">
                 <div>
-                  <h2 className="inline-block text-2xl pb-4 mb-4 text-gray-100">
+                  <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
                     Support
                   </h2>
                 </div>
@@ -50,79 +51,81 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-
+              {/* section 2 */}
               <div className="px-4 my-4 w-full sm:w-auto">
                 <div>
-                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
-                    Company
+                  <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
+                    About us
                   </h2>
                 </div>
                 <ul className="leading-8">
                   <li>
-                    <a href="#" className="hover:text-blue-400">
-                      About Us
+                    <a href="#" className="hover:text-secondary">
+                    EMI Terms
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
-                      Terms &amp; Conditions
+                    <a href="#" className="hover:text-secondary">
+                    Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
-                      Privacy Policy
+                    <a href="#" className="hover:text-secondary">
+                    Star Point Policy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
-                      Contact Us
+                    <a href="#" className="hover:text-secondary">
+                    Contact Us
                     </a>
                   </li>
                 </ul>
               </div>
+              {/* section 3 */}
               <div className="px-4 my-4 w-full sm:w-auto">
                 <div>
-                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
+                  <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
                     Blog
                   </h2>
                 </div>
                 <ul className="leading-8">
                   <li>
-                    <a href="#" className="hover:text-blue-400">
+                    <a href="#" className="hover:text-secondary">
                       Getting Started With HTML and CSS
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
+                    <a href="#" className="hover:text-secondary">
                       What Is Flex And When to Use It?
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
+                    <a href="#" className="hover:text-secondary">
                       How TailwindCSS Can Help Your Productivity?
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
+                    <a href="#" className="hover:text-secondary">
                       5 Tips to Make Responsive Website
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:text-blue-400">
+                    <a href="#" className="hover:text-secondary">
                       See More
                     </a>
                   </li>
                 </ul>
               </div>
+              {/* Section 4 */}
               <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
                 <div>
-                  <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
+                  <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
                     Connect With Us
                   </h2>
                 </div>
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400"
+                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-secondary hover:border-blue-400"
                 >
                   <svg
                     className="w-4 h-4 fill-current"
@@ -134,7 +137,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400"
+                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-secondary hover:border-blue-400"
                 >
                   <svg
                     className="w-4 h-4 fill-current"
@@ -146,7 +149,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400"
+                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-secondary hover:border-blue-400"
                 >
                   <svg
                     className="w-4 h-4 fill-current"
@@ -158,7 +161,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-blue-400 hover:border-blue-400"
+                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-secondary hover:border-blue-400"
                 >
                   <svg
                     className="w-4 h-4 fill-current"
@@ -170,7 +173,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-blue-400 hover:border-blue-400"
+                  className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-secondary hover:border-blue-400"
                 >
                   <svg
                     className="w-4 h-4 fill-current"
