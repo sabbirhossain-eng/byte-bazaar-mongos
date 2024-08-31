@@ -1,9 +1,11 @@
+import Container from "../Shear/Container/Container";
 
 
 const Footer = () => {
     return (
         <footer>
     <div className="bg-gray-800 py-4 text-gray-400">
+      <Container>
       <div className="container px-4 mx-auto">
         <div className="-mx-4 flex flex-wrap justify-between">
           <div className="px-4 my-4 w-full xl:w-1/5">
@@ -84,6 +86,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      </Container>
     </div>
     <div className="bg-indigo-700 py-4 text-gray-100">
       <div className="container mx-auto px-4">

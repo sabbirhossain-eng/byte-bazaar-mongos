@@ -14,8 +14,8 @@ const Home = () => {
                 <Maerquees/>
                 <FeaturedCategory/>
                 <FeaturedProducts/>
-                <Footer/>
             </Container>
+                <Footer/>
         </div>
     );
 };
