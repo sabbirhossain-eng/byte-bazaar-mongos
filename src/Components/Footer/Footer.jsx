@@ -141,10 +141,31 @@ const Footer = () => {
               <div className="px-4 my-4 w-full sm:w-auto xl:w-1/5">
                 <div>
                   <h2 className="inline-block text-lg pb-4 mb-4 text-gray-100 uppercase">
-                    Connect With Us
+                  Stay Connected
                   </h2>
                 </div>
-                
+                <ul className="leading-8">
+                  <li>
+                    <a className=" text-white">
+                    Byte Bazaar
+                    </a>
+                  </li>
+                  <li>
+                    <a  className="">
+                    Head Office: humayun read, mohammadpur, Dhaka 1000
+                    </a>
+                  </li>
+                  <li>
+                    <a className="">
+                    Email:
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="text-secondary hover:underline">
+                    support@bytebazaar.com
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -174,10 +195,10 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="-mx-4 flex flex-wrap justify-between">
             <div className="px-4 text-sm text-gray-500 w-full text-center sm:w-auto sm:text-left">
-            © 2024 Byte Bazzer | All rights reserved
+            © 2024 Byte Bazaar | All rights reserved
             </div>
             <div className="px-4 w-full text-sm text-gray-500 text-center sm:w-auto sm:text-left">
-            Powered By: Byte Bazzer
+            Powered By: Byte Bazaar
             </div>
           </div>
         </div>
