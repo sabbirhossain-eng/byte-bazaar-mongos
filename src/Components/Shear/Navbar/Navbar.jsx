@@ -14,11 +14,11 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import { useState } from "react";
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import MenuListItem from "./MenuListItem";
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
 const Navbar = () => {
   const handleClick = () => {
@@ -222,7 +222,7 @@ const Navbar = () => {
             edge="end"
             color="inherit"
           >
-            <MoreIcon />
+            <ShoppingBasketIcon />
           </IconButton>
           </div>
         </StyledToolbar>
