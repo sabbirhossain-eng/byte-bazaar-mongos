@@ -1,21 +1,35 @@
 import Container from "../Container/Container";
 import logo from "../../../assets/Byte Bzaar logo.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { MdCardGiftcard } from "react-icons/md";
 import { GiElectric } from "react-icons/gi";
 import { IoPerson } from "react-icons/io5";
 import { BsCartCheckFill } from "react-icons/bs";
 import "./Navbar.css";
-import Typography from "@mui/material/Typography";
-import { HashLink } from "react-router-hash-link";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import MoreIcon from '@mui/icons-material/MoreVert';
+import { useState } from "react";
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import MenuListItem from "./MenuListItem";
 
 const Navbar = () => {
-  const { pathname } = useLocation();
   const handleClick = () => {
     window.location.reset(true);
+  };
+  
+  // nav Small drawer
+  const [open, setOpen] = useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
   };
 
   const Search = styled('div')(({ theme }) => ({
@@ -55,88 +69,27 @@ const Navbar = () => {
     },
   }));
 
-  const menuList = (
-    <>
-      <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
-        <Typography className="nav-link relative">
-          <Link
-            onClick={handleClick}
-            className={` ${
-              pathname === "/"
-                ? "text-primary"
-                : "text-gray-700 dark:text-gray-200"
-            } no-underline font-semibold   lg:hover:bg-none text-gray-800 dark:hover:text-white p-4 lg:p-0 inline-block rounded-[10px] w-full`}
-            to={"/"}
-          >
-            Home
-          </Link>
-        </Typography>
-        <Typography className="nav-link relative">
-          <Link
-            className={` ${
-              pathname === "/laptop"
-                ? "text-primary"
-                : "text-gray-700 dark:text-gray-200"
-            } no-underline font-semibold  text-gray-800 dark:hover:text-white p-4 lg:p-0 inline-block rounded-[10px] w-full`}
-            to={"/laptop"}
-          >
-            Laptop
-          </Link>
-        </Typography>
-        <Typography className="nav-link relative">
-          <Link
-            className={` ${
-              pathname === "/desktop"
-                ? "text-primary"
-                : "text-gray-700 dark:text-gray-200"
-            } no-underline font-semibold  text-gray-800 dark:hover:text-white p-4 lg:p-0 inline-block rounded-[10px] w-full`}
-            to={"/desktop"}
-          >
-            Desktop
-          </Link>
-        </Typography>
-        <Typography className="nav-link relative">
-          <Link
-            className={` ${
-              pathname === "/monitor"
-                ? "text-primary"
-                : "text-gray-700 dark:text-gray-200"
-            } no-underline font-semibold  text-gray-800 dark:hover:text-white p-4 lg:p-0 inline-block rounded-[10px] w-full`}
-            to={"/monitor"}
-          >
-            Monitor
-          </Link>
-        </Typography>
-        <Typography className="nav-link relative">
-          <Link
-            className={` ${
-              pathname === "/blog"
-                ? "text-primary"
-                : "text-gray-700 dark:text-gray-200"
-            } no-underline font-semibold   lg:hover:bg-none text-gray-800 dark:hover:text-white p-4 lg:p-0 inline-block rounded-[10px] w-full`}
-            to={"/blog"}
-          >
-            Blog
-          </Link>
-        </Typography>
-        <Typography className="nav-link relative">
-          <Link
-            className={` ${
-              pathname === "/contactUs"
-                ? "text-primary"
-                : "text-gray-700 dark:text-gray-200"
-            } no-underline font-semibold   lg:hover:bg-none text-gray-800  dark:hover:text-white p-4 lg:p-0 inline-block rounded-[10px] w-full`}
-          >
-            <HashLink smooth to="/#contactUs">
-              Contact Us
-            </HashLink>
-          </Link>
-        </Typography>
-      </ul>
-    </>
+  // nav small
+  const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+    alignItems: 'flex-start',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(2),
+  }));
+
+  
+
+  // nav small drawer
+  const DrawerList = (
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <List>
+        <MenuListItem/>
+      </List>
+    </Box>
   );
+
   return (
     <div>
+      <div className="hidden lg:block">
       {/* nav top */}
       <div className=" border-b border-gray-300 bg-black">
         <Container>
@@ -236,9 +189,49 @@ const Navbar = () => {
       {/* nav bottom */}
       <div className="bg-slate-50 w-full">
         <Container>
-          <div>{menuList}</div>
+          <div>
+          <MenuListItem/>
+          </div>
         </Container>
       </div>
+    </div>
+    {/* nav Small */}
+    <div className="block lg:hidden">
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <StyledToolbar className="flex justify-between items-center bg-black">
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon onClick={toggleDrawer(true)}/>
+          </IconButton>
+          <IconButton>
+            <img src={logo} alt="" />
+          </IconButton>
+          <div>
+          <IconButton size="large" aria-label="search" color="inherit">
+            <SearchIcon />
+          </IconButton>
+          <IconButton
+            size="large"
+            aria-label="display more actions"
+            edge="end"
+            color="inherit"
+          >
+            <MoreIcon />
+          </IconButton>
+          </div>
+        </StyledToolbar>
+      </AppBar>
+    </Box>
+    <Drawer open={open} onClose={toggleDrawer(false)}>
+        {DrawerList}
+      </Drawer>
+    </div>
     </div>
   );
 };
