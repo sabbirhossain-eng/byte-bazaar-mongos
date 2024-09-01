@@ -20,7 +20,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="flex max-h-[100-60vh] gap-6">
+    <div className="flex max-h-[100-60vh] gap-6 flex-col lg:flex-row">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -34,7 +34,7 @@ const Banner = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper w-[69.5%]"
+        className="mySwiper w-full lg:w-[69.5%]"
       >
         <SwiperSlide>
           <img src={img1} alt="" className="w-full h-full relative" />
@@ -60,7 +60,7 @@ const Banner = () => {
         </div>
       </Swiper>
       {/* side ad */}
-      <div className="w-1/3 flex flex-col gap-16 h-[60vh]">
+      <div className="w-full lg:w-1/3 flex flex-row lg:flex-col gap-5 lg:gap-16 lg:h-[60vh]">
         <div>
           <img src={img5} alt="" className="w-full h-full" />
         </div>
