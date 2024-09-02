@@ -155,11 +155,11 @@ const Navbar = () => {
                         Account
                       </h4>
                       <p className="text-gray-400">
-                        <Link to="/register" className="hover:text-secondary">
+                        <Link to="/signUp" className="hover:text-secondary">
                           Register
                         </Link>
                         <span> or </span>
-                        <Link to="/login" className="hover:text-secondary">
+                        <Link to="/signIn" className="hover:text-secondary">
                           Login
                         </Link>
                       </p>
