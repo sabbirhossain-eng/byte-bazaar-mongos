@@ -64,7 +64,7 @@ const GoogleAndFacebookLogin = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 max-w-xs mx-auto mb-4">
+    <div className="flex flex-col gap-4 mx-auto mb-2">
       {/* Google Sign In Button */}
       <Button
         variant="outlined"

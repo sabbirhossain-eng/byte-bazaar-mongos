@@ -48,7 +48,7 @@ const SignIn = () => {
 //   }
   
   return (
-    <div className="mt-20">
+    <div className="mt-16 max-w-sm mx-auto">
         <div className="text-center mb-4">
             <span className="bg-primary p-3 pb-4 rounded-full items-center text-white"><LockOutlinedIcon/></span>
             <h3 className="text-2xl font-semibold mt-4">Sign in</h3>
@@ -58,6 +58,13 @@ const SignIn = () => {
         <div>
             <GoogleAndFacebookLogin/>
         </div>
+        {/* or */}
+        <div className="border-b text-center items-center max-w-xs mx-auto mb-6">
+        <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
+          Or
+        </div>
+      </div>
+      {/* input field */}
       <div className="card flex-shrink-0 w-full max-w-sm mx-auto max-h-[100-60vh]">
         <form onSubmit={handleLogin} className="">
           <div className="flex flex-col gap-4">
