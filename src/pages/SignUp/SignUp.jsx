@@ -13,11 +13,12 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import GoogleAndFacebookLogin from "../../Components/Button/GoogleAndFacebookLogin/GoogleAndFacebookLogin";
 import LoadingButton from '@mui/lab/LoadingButton';
 import SendIcon from '@mui/icons-material/Send';
+import { MuiTelInput } from 'mui-tel-input'
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
 //   const [loading, setLoading] = useState(true);
-  
+    const [phone, setPhone] = useState('')
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -41,6 +42,11 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(email, password);
   };
+
+//   phone number handel
+    const handlePhoneChange = (newPhone) => {
+    setPhone(newPhone)
+  }
 
 //   button loading
 // function handleClick() {
@@ -68,6 +74,26 @@ const SignUp = () => {
       <div className="card flex-shrink-0 w-full max-w-sm mx-auto max-h-[100-60vh]">
         <form onSubmit={handleLogin} className="">
           <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4">
+              <TextField
+                id="outlined-first-name-input"
+                label="First Name"
+                type="text"
+                autoComplete="current-first-name"
+                required
+                size="small"
+                fullWidth
+              />
+              <TextField
+                id="outlined-last-name-input"
+                label="Last Name"
+                type="text"
+                autoComplete="current-last-name"
+                required
+                size="small"
+                fullWidth
+              />
+            </div>
             <div>
               <TextField
                 className=""
@@ -113,6 +139,15 @@ const SignUp = () => {
               Forgot password?
             </a>
           </label>
+          <div className="mt-4">
+          <MuiTelInput 
+          value={phone}
+          defaultCountry="BD"
+          required
+          size="small"
+          fullWidth
+          onChange={handlePhoneChange} />
+          </div>
 
           <div className="form-control mt-6">
           <LoadingButton
