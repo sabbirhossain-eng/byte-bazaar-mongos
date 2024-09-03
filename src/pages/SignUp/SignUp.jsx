@@ -74,7 +74,7 @@ const SignUp = () => {
       <div className="card flex-shrink-0 w-full max-w-sm mx-auto max-h-[100-60vh]">
         <form onSubmit={handleLogin} className="">
           <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-4">
+            <div className="flex gap-4">
               <TextField
                 id="outlined-first-name-input"
                 label="First Name"
