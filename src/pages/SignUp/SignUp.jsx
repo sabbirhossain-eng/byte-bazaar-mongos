@@ -13,12 +13,12 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import GoogleAndFacebookLogin from "../../Components/Button/GoogleAndFacebookLogin/GoogleAndFacebookLogin";
 import LoadingButton from '@mui/lab/LoadingButton';
 import SendIcon from '@mui/icons-material/Send';
-import { MuiTelInput } from 'mui-tel-input'
+import { MuiTelInput } from 'mui-tel-input';
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
 //   const [loading, setLoading] = useState(true);
-    const [phone, setPhone] = useState('')
+    const [phone, setPhone] = useState('');
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 

@@ -17,6 +17,8 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "@mui/styles": "^6.0.1",
     "@toolpad/core": "^0.5.2",
+    "firebase": "^10.13.1",
+    "jsonwebtoken": "^9.0.2",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "mui-tel-input": "^6.0.0",
