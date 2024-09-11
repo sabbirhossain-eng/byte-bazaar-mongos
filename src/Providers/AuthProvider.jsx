@@ -13,11 +13,17 @@ import app from "../Firebase/Firebase.config";
 
 const auth = getAuth(app);
 export const AuthContext = createContext(null);
-const AuthProvider = () => {
+
+const AuthProvider = ({children}) => {
+
+    const authInfo = {
+
+    }
     return (
-        <div>
+        <AuthContext.Provider value={authInfo}>
+            {children}
             
-        </div>
+        </AuthContext.Provider>
     );
 };
 
