@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import {
+    FacebookAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
@@ -17,6 +18,8 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
+  const facebookProvider = new FacebookAuthProvider();
+
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
   const [userRole, setUserRole] = useState(null);
@@ -49,6 +52,10 @@ const AuthProvider = ({ children }) => {
   const googleLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
+  };
+  const facebookLogin = () => {
+    setLoading(true);
+    return signInWithPopup(auth, facebookProvider);
   };
 
   useEffect(() => {
@@ -90,6 +97,7 @@ const AuthProvider = ({ children }) => {
     logOut,
     updateUserProfile,
     googleLogin,
+    facebookLogin,
     userRole,
     userId,
   };
