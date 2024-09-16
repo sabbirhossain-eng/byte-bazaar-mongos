@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import {
-    FacebookAuthProvider,
+  FacebookAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
@@ -13,8 +13,8 @@ import {
 import app from "../Firebase/Firebase.config";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
 
-const auth = getAuth(app);
 export const AuthContext = createContext(null);
+const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
@@ -69,7 +69,7 @@ const AuthProvider = ({ children }) => {
 
       //access jwt token
       if (currentUser) {
-        const res = await axiosPublic.post('/jwt/access_token', loggedUser, {
+        const res = await axiosPublic.post("/jwt/access_token", loggedUser, {
           withCredentials: true,
         });
 
@@ -78,7 +78,7 @@ const AuthProvider = ({ children }) => {
         setUserId(res.data.user._id);
       } else {
         // remove jwt token
-        await axiosPublic.post('/jwt/remove_token', loggedUser, {
+        await axiosPublic.post("/jwt/remove_token", loggedUser, {
           withCredentials: true,
         });
       }

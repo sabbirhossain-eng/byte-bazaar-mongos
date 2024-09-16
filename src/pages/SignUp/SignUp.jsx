@@ -14,6 +14,9 @@ import GoogleAndFacebookLogin from "../../Components/Button/GoogleAndFacebookLog
 import LoadingButton from '@mui/lab/LoadingButton';
 import SendIcon from '@mui/icons-material/Send';
 import { MuiTelInput } from 'mui-tel-input';
+import useAuth from "../../Hooks/useAuth";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -23,6 +26,9 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
+  const {createUser, updateUserProfile}= useAuth();
+  const axiosPublic = useAxiosPublic();
+
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -37,7 +43,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.from?.pathname || "/";
+  const toHome = location.state?.from?.pathname || "/";
 
 //   phone number handel
   //   const handlePhoneChange = (newPhone) => {
@@ -50,19 +56,50 @@ function handleClick() {
     setLoading(true);
   }
 
-const handleLogin = (event) => {
+const handleLogin = async (event) => {
   event.preventDefault();
   
   const first_Name = firstName || '';
   const last_Name = lastName || '';
   const newEmail = email || '';
   const newPassword = password || '';
-  const phoneNumber = phone || '';
-  console.log(first_Name, last_Name, newEmail, newPassword, phoneNumber);
-  
-  // navigate(from);
-  // setLoading(false);
-  
+  const phone_Number = phone || '';
+  const newUser= {first_Name, last_Name, newEmail, newPassword, phone_Number};
+  // console.log(first_Name, last_Name, newEmail, newPassword, phoneNumber);
+
+  // post data in server
+  try {
+    // Post data to the server
+    const res = await axiosPublic.post('/users', {
+      first_Name,
+      last_Name,
+      phone_Number,
+      email,
+      role: 'user',
+      image: '', // Assuming this is where the image would go
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (res.status === 200) {
+      // Create user and update profile after successful server response
+      await createUser(email, password);
+      await updateUserProfile(newUser);
+      toast.success('Sign Up Successfully');
+      setLoading(false);
+      navigate(toHome);
+    }
+  } catch (error) {
+    // Handling potential errors for both the signup process and Cloudinary
+    if (error.response?.data?.status === 'Fail') {
+      toast.error('This email already exists');
+    } else {
+      toast.error(error.message);
+      console.error('Cloudinary Upload Error or Other Error:', error);
+    }
+  }
 };
   
   return (
